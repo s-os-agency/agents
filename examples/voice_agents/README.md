@@ -27,7 +27,7 @@ session = AgentSession(
 ### 🛠️ Tool Integration & Function Calling
 
 - [`annotated_tool_args.py`](./annotated_tool_args.py) - Using Python type annotations for tool arguments
-- [`dynamic_tool_creation.py`](./dynamic_tool_creation.py) - Creating and registering tools dynamically at runtime
+- [`dynamic_tool_creation.py`](./dynamic_tool_creation.py) - Creating and registering tools dynamically when the agent runs
 - [`raw_function_description.py`](./raw_function_description.py) - Using raw JSON schema definitions for tool descriptions
 - [`silent_function_call.py`](./silent_function_call.py) - Executing function calls without verbal responses to user
 - [`long_running_function.py`](./long_running_function.py) - Handling long running function calls with interruption support
@@ -68,12 +68,12 @@ session = AgentSession(
 - [`langgraph_agent.py`](./langgraph_agent.py) - LangGraph integration
 - [`mcp/`](./mcp/) - Model Context Protocol (MCP) integration examples
   - [`mcp-agent.py`](./mcp/mcp-agent.py) - MCP agent integration
-  - [`server.py`](./mcp/server.py) - MCP server example
+  - [`server.py`](./mcp/server.py) - tool server example
 - [`zapier_mcp_integration.py`](./zapier_mcp_integration.py) - Automating workflows with Zapier through MCP
 
-### 💾 RAG & Knowledge Management
+### 💾 source based answers & Knowledge Management
 
-- [`llamaindex-rag/`](./llamaindex-rag/) - Complete RAG implementation with LlamaIndex
+- [`llamaindex-rag/`](./llamaindex-rag/) - Complete answers based on saved sources with LlamaIndex
   - [`chat_engine.py`](./llamaindex-rag/chat_engine.py) - Chat engine integration
   - [`query_engine.py`](./llamaindex-rag/query_engine.py) - Query engine used in a function tool
   - [`retrieval.py`](./llamaindex-rag/retrieval.py) - Document retrieval

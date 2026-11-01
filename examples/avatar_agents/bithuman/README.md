@@ -40,7 +40,7 @@ python examples/avatar_agents/bithuman/agent_worker.py dev
 ## How It Works
 
 This example integrates BitHuman directly within the agent worker process:
-- Audio from the agent is routed to the BitHuman runtime
+- Audio from the agent is routed to the BitHuman system
 - The BitHuman SDK processes the audio to generate realistic animations
 - Synchronized audio and video are published to the LiveKit room
 

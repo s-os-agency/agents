@@ -1,6 +1,6 @@
-# RAG Example using LlamaIndex
+# source based answers Example using LlamaIndex
 
-This repository showcases three ways to build a voice assistant with Retrieval-Augmented Generation (RAG) using LlamaIndex:
+This repository showcases three ways to build a voice assistant with Retrieval-Augmented Generation (source based answers) using LlamaIndex:
 
 1. **`chat_engine.py`**: Utilizes LlamaIndex's `as_chat_engine` for a straightforward, integrated solution. **Trade-off**: Lacks function calling support, limiting advanced interactions.
 

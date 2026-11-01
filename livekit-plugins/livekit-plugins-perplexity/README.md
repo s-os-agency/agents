@@ -1,7 +1,7 @@
 # Perplexity plugin for LiveKit Agents
 
 Support for [Perplexity](https://www.perplexity.ai/) LLMs via the OpenAI-compatible
-chat completions endpoint at `https://api.perplexity.ai`.
+chat completions service address at `https://api.perplexity.ai`.
 
 See [https://docs.livekit.io/agents/models/llm/perplexity/](https://docs.livekit.io/agents/models/llm/perplexity/) for more information.
 

@@ -67,6 +67,6 @@ Rules:
 - Keywords must be written in Korean pronunciation (Hangul and spaces only); non-Korean input will error.
 
 Notes:
-- The WebSocket streaming endpoint accepts raw PCM frames when `encoding=LINEAR16`.
+- The WebSocket streaming service address accepts raw PCM frames when `encoding=LINEAR16`.
 - The plugin relies on the server-side endpointing (EPD). You do not need to send finalize messages.
 - When the pipeline closes the stream, the plugin sends `EOS` to end the session.

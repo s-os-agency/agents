@@ -38,7 +38,7 @@ agents that can see, hear, and understand.
 - **Telephony integration**: Works seamlessly with LiveKit's [telephony stack](https://docs.livekit.io/sip/), allowing your agent to make calls to or receive calls from phones.
 - **Exchange data with clients**: Use [RPCs](https://docs.livekit.io/home/client/data/rpc/) and other [Data APIs](https://docs.livekit.io/home/client/data/) to seamlessly exchange data with clients.
 - **Semantic turn detection**: Uses a transformer model to detect when a user is done with their turn, helps to reduce interruptions.
-- **MCP support**: Native support for MCP. Integrate tools provided by MCP servers with one line of code.
+- **MCP support**: Native support for MCP. Integrate tools provided by tool servers with one line of code.
 - **Builtin test framework**: Write tests and use judges to ensure your agent is performing as expected.
 - **Open-source**: Fully open-source, allowing you to run the entire stack on your own servers, including [LiveKit server](https://github.com/livekit/livekit), one of the most widely used WebRTC media servers.
 
@@ -58,7 +58,7 @@ Documentation on the framework and how to use it can be found [here](https://doc
 
 If you're using an AI coding assistant to build with LiveKit Agents, we recommend the following setup for the best results:
 
-1. **Install the [LiveKit Docs MCP server](https://docs.livekit.io/mcp)** — Gives your coding agent access to up-to-date LiveKit documentation, code search across LiveKit repositories, and working examples.
+1. **Install the [LiveKit Docs tool server](https://docs.livekit.io/mcp)** — Gives your coding agent access to up-to-date LiveKit documentation, code search across LiveKit repositories, and working examples.
 
 2. **Install the [LiveKit Agent Skill](https://github.com/livekit/agent-skills)** — Provides your coding agent with architectural guidance and best practices for building voice AI applications, including workflow design, handoffs, tasks, and testing patterns.
 
@@ -66,7 +66,7 @@ If you're using an AI coding assistant to build with LiveKit Agents, we recommen
    npx skills add livekit/agent-skills --skill livekit-agents
    ```
 
-The Agent Skill works best alongside the MCP server: the skill teaches your agent *how to approach* building with LiveKit, while the MCP server provides the *current API details* to implement it correctly.
+The Agent Skill works best alongside the tool server: the skill teaches your agent *how to approach* building with LiveKit, while the tool server provides the *current API details* to implement it correctly.
 
 ## Core concepts
 

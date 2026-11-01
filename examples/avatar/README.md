@@ -1,7 +1,7 @@
 # LemonSlice Avatar
 
 A voice agent with a talking-head avatar you can swap mid-conversation.
-Pick a persona from the dropdown — Leila, Jess, a software engineer, a
+Pick a role from the dropdown — Leila, Jess, a software engineer, a
 cat, a fox — and the agent's face, voice, and personality
 all change without dropping the call.
 
@@ -11,7 +11,7 @@ Try it in the [LiveKit Playground](https://agents.livekit.io/?example=avatar).
 
 - **9 personas** to choose from — each has its own face, voice, system
   prompt, and idle/speaking body-language hints.
-- **Live persona switching** — the dropdown fires a `set_avatar` RPC; a
+- **Live role switching** — the dropdown fires a `set_avatar` RPC; a
   short hold tone plays while the avatar reconnects with the new face
   and voice.
 - **Hero motions** — for **Leila**, **Jess**, and **Mr Fox**, the LLM can
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 python agent.py dev
 ```
 
-Connect from any LiveKit client. The agent reads the starting persona
+Connect from any LiveKit client. The agent reads the starting role
 from the job metadata; if no metadata is sent it defaults to Leila.
 
 ## Adding or editing personas
@@ -47,17 +47,17 @@ Everything lives in [`personas.py`](./personas.py). Each entry has:
 
 - `image_url` — the picture LemonSlice will animate.
 - `voice_id` — a Cartesia voice id.
-- `system_prompt` — who the persona *is*. Keep it tight; the shared
+- `system_prompt` — who the role *is*. Keep it tight; the shared
   `COMMON_INSTRUCTIONS` block already covers global rules (be brief,
   no markdown, etc.).
 - `speaking_prompt` / `idle_prompt` — short body-language cues sent to
   LemonSlice (`agent_prompt` / `agent_idle_prompt`).
 
-To add a persona, append a new `Persona(...)` to the `PERSONAS` dict.
+To add a role, append a new `Persona(...)` to the `PERSONAS` dict.
 The playground UI auto-discovers it once
 [`examples/playground.yaml`](../playground.yaml) is updated too.
 
-## How persona switching works
+## How role switching works
 
 When the playground dropdown changes, the frontend calls the agent's
 `set_avatar` RPC. The agent:
@@ -66,7 +66,7 @@ When the playground dropdown changes, the frontend calls the agent's
 2. Closes the current avatar session.
 3. Opens a fresh one with the new face + body-language prompts.
 4. Swaps the TTS voice + system prompt.
-5. Greets you as the new persona.
+5. Greets you as the new role.
 
 No reconnect, no page refresh — the same call, with a different face.
 

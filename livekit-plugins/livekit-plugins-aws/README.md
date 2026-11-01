@@ -349,7 +349,7 @@ Amazon Nova 2 Lite is a fast, cost-effective reasoning model optimized for every
 - **Cost-effective** - Industry-leading price-performance
 - **Multimodal inputs** - Text, image, and video ([documentation](https://docs.aws.amazon.com/nova/latest/nova2-userguide/using-multimodal-models.html))
 - **1 million token context window** - Handle long conversations and complex context ([source](https://aws.amazon.com/blogs/aws/introducing-amazon-nova-2-lite-a-fast-cost-effective-reasoning-model/))
-- **Agentic workflows** - RAG systems, function calling, tool use
+- **Agentic workflows** - source based answers systems, function calling, tool use
 - **Fine-tuning support** - Customize for your specific use case
 
 Ideal for pipeline mode where you need fast, accurate LLM responses in voice applications.

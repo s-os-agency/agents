@@ -22,7 +22,7 @@ The three ordering tools are constructed by `build_combo_order_tool`, `build_hap
 
 https://github.com/livekit/agents/blob/8283a5a5c9863a07bcf030ee90e8ab780e1e569b/examples/drive-thru/agent.py#L85-L119
 
-This restricts the LLM to known IDs at the schema layer before any runtime logic runs. `ToolError` handles the cases that can't be caught statically — for example, when a drink has multiple available sizes and the customer hasn't specified one yet, the tool raises a `ToolError` prompting the agent to ask for clarification before retrying.
+This restricts the LLM to known IDs at the schema layer before any system logic runs. `ToolError` handles the cases that can't be caught statically — for example, when a drink has multiple available sizes and the customer hasn't specified one yet, the tool raises a `ToolError` prompting the agent to ask for clarification before retrying.
 
 ### Order Types
 

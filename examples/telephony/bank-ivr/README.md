@@ -63,7 +63,7 @@ You need a LiveKit configured SIP trunk to allow the agents to receive inbound c
 
 To adapt this for a real-world use case (like calling an airline):
 1.  Modify `ivr_navigator_agent.py`.
-2.  Update the system prompt to describe the new persona and goal.
+2.  Update the system prompt to describe the new role and goal.
 3.  The `send_dtmf_events` tool is the primary way the agent interacts with the world.
 
 ## Sample Scenarios

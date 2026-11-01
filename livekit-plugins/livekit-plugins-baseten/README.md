@@ -12,11 +12,11 @@ pip install livekit-plugins-baseten
 
 You'll need an API key from Baseten. It can be set as an environment variable: `BASETEN_API_KEY`
 
-You also need to deploy a model to Baseten and will need your model endpoint to configure the plugin.
+You also need to deploy a model to Baseten and will need your model service address to configure the plugin.
 
 ## STT (Speech-to-Text)
 
-The STT plugin connects to Baseten's [Whisper Streaming](https://docs.baseten.co/reference/inference-api/predict-endpoints/streaming-transcription-api) WebSocket endpoint for real-time transcription. It works with both **truss** and **chain** deployments.
+The STT plugin connects to Baseten's [Whisper Streaming](https://docs.baseten.co/reference/inference-api/predict-endpoints/streaming-transcription-api) WebSocket service address for real-time transcription. It works with both **truss** and **chain** deployments.
 
 ### Recommended model
 
@@ -31,7 +31,7 @@ The STT plugin connects to Baseten's [Whisper Streaming](https://docs.baseten.co
 
 ### Basic usage
 
-You can specify the endpoint in three ways:
+You can specify the service address in three ways:
 
 ```python
 from livekit.plugins import baseten
@@ -152,7 +152,7 @@ tts = baseten.TTS(
 
 ## LLM (Large Language Model)
 
-The LLM plugin wraps Baseten's OpenAI-compatible inference endpoint.
+The LLM plugin wraps Baseten's OpenAI-compatible inference service address.
 
 ```python
 llm = baseten.LLM(

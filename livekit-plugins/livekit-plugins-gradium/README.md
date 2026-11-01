@@ -15,4 +15,4 @@ pip install livekit-plugins-gradium
 
 You'll need an API key from Gradium. It can be set as an environment variable: `GRADIUM_API_KEY`.
 
-You also need to deploy a model to Gradium and will need your model endpoint to configure the plugin.
+You also need to deploy a model to Gradium and will need your model service address to configure the plugin.

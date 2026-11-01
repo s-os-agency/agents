@@ -1,6 +1,6 @@
 # BitHuman plugin for LiveKit Agents
 
-Support for avatars with [bitHuman](https://www.bithuman.ai/)'s local runtime SDK.
+Support for avatars with [bitHuman](https://www.bithuman.ai/)'s local system SDK.
 
 See the [bitHuman integration docs](https://docs.livekit.io/agents/models/avatar/plugins/bithuman/) for more information.
 

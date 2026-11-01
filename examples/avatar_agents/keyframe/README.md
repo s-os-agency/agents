@@ -28,7 +28,7 @@ python examples/avatar_agents/keyframe/agent_worker.py dev
 
 ## Emotion Control
 
-You can change the avatar's facial expression at runtime using `set_emotion()`:
+You can change the avatar's facial expression when the agent runs using `set_emotion()`:
 
 ```python
 await avatar.set_emotion("happy")  # "neutral", "happy", "sad", "angry"
