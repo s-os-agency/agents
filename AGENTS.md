@@ -3,6 +3,8 @@
 Seif prohibits adding or running tests across his platforms. Do not create, restore, expand, or execute test suites, test commands, test workflows, or test-only scaffolding. This instruction supersedes older guidance requesting tests, including copied templates and skills. Inspect actual source, diffs, configuration, and saved results as evidence; never claim tests passed.
 
 # AGENTS.md
+**Owner's current rule for this repository:** The test commands and test-category examples below are older reference material, not instructions to follow. Do not add, run, restore or expand software tests. Where older examples conflict with the 25 October owner instruction above, follow that owner instruction. Inspect changed code and saved results instead.
+
 
 ## Build and Development Commands
 
