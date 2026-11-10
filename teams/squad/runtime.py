@@ -58,7 +58,7 @@ class SquadTask:
     owner_seat: str
     priority: str = "normal"
     status: TaskStatus = TaskStatus.ASSIGNED
-    progress: int = 10
+    progress: int = 0
     qa_loops: int = 0
     evidence_refs: list[str] = field(default_factory=list)
     events: list[TaskEvent] = field(default_factory=list)
@@ -82,7 +82,7 @@ _TRANSITIONS: dict[TaskStatus, set[TaskStatus]] = {
 
 
 class SquadTeam:
-    """Assigns cross-functional work and emits progress suitable for Control Room projections."""
+    """Tracks caller-reported task state in memory; does not invoke model executors."""
 
     TEAM_ID = "s-squad"
     PERFORMANCE_DIMENSIONS = (
@@ -244,6 +244,9 @@ class SquadTeam:
             "team_id": self.TEAM_ID,
             "name": "S/Squad",
             "team_type": "cross-functional-delivery",
+            "execution_mode": "tracking_only",
+            "storage": "memory",
+            "progress_source": "caller_reported",
             "supported_domains": [domain.value for domain in WorkDomain],
             "performance_dimensions": list(self.PERFORMANCE_DIMENSIONS),
             "seats": [
@@ -256,12 +259,44 @@ class SquadTeam:
                 }
                 for seat in self._seats.values()
             ],
+            "tasks": [
+                self._task_snapshot(task)
+                for task in sorted(self._tasks.values(), key=lambda item: item.task_id)
+            ],
             "progress": {
                 "total": len(self._tasks),
                 "by_status": counts,
                 "qa_loops": sum(task.qa_loops for task in self._tasks.values()),
                 "evidence_count": sum(len(task.evidence_refs) for task in self._tasks.values()),
             },
+        }
+
+    @staticmethod
+    def _task_snapshot(task: SquadTask) -> dict[str, Any]:
+        latest = task.events[-1] if task.events else None
+        return {
+            "task_id": task.task_id,
+            "title": task.title,
+            "objective": task.objective,
+            "domain": task.domain.value,
+            "owner_seat": task.owner_seat,
+            "priority": task.priority,
+            "current_stage": task.status.value,
+            "progress": task.progress,
+            "qa_loops": task.qa_loops,
+            "blocker": latest.note if latest and task.status is TaskStatus.BLOCKED else None,
+            "evidence_refs": list(task.evidence_refs),
+            "updated_at": latest.occurred_at if latest else None,
+            "events": [
+                {
+                    "status": event.status.value,
+                    "occurred_at": event.occurred_at,
+                    "progress": event.progress,
+                    "note": event.note,
+                    "evidence_ref": event.evidence_ref,
+                }
+                for event in task.events
+            ],
         }
 
     def _require_seat(self, seat_id: str) -> SquadSeat:

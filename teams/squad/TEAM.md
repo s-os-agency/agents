@@ -26,6 +26,8 @@ Every work item exposes its current stage, primary seat, percentage progress, QA
 
 `queued → assigned → executing → qa_review → completed`
 
+Assignment starts at 0%; choosing a seat is not delivered progress. The Python tracker exposes each task and its recorded events, including the last update, blocker note, and evidence references. Percentages and state changes are caller-reported, not independently measured performance. This component keeps state in memory and does not invoke models or persist to MariaDB; the execution and durable-storage integrations remain separate.
+
 QA can return work through `revision → executing`. Blocked and cancelled are explicit terminal or recovery paths; silence is never interpreted as progress.
 
 ## Governance boundary

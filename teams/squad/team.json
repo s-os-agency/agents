@@ -72,7 +72,10 @@
       "quality",
       "reliability",
       "efficiency"
-    ]
+    ],
+    "assignment_progress": 0,
+    "progress_source": "caller_reported",
+    "python_component_scope": "in_memory_tracker"
   },
   "seats": [
     "team-lead",
