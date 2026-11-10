@@ -16,6 +16,10 @@ S/Squad is a separately assignable, cross-functional delivery team inside S/Agen
 
 Address the team as `@S/Squad` or create an `S/Squad work request` in GitHub. Every assignment must define an objective, work domain, acceptance criteria, and priority. The Squad Lead selects the primary specialist; QA and Scribe seats participate automatically when evidence or progress reporting is required.
 
+## Mission readiness
+
+Readiness is evaluated for the team identity and the assigned specialist with the lead, QA, and progress participants needed by the mission. Unrelated domain specialists remain visible in fleet status but do not block that mission. Existing owner activation, authentic identity, and executor-binding requirements remain in force. A route preview does not dispatch a model or prove completed work.
+
 ## Progress contract
 
 Every work item exposes its current stage, primary seat, percentage progress, QA return loops, blocker, evidence references, and last update. The standard lifecycle is:
@@ -27,7 +31,7 @@ QA can return work through `revision → executing`. Blocked and cancelled are e
 ## Governance boundary
 
 - Every active seat must bind to a real S/Agent Passport identifier.
-- Supabase is the durable source for assignments, progress, evidence, and performance history.
+- Manus MariaDB is the durable source for the migrated worker registry, assignments, progress, evidence, and performance history. Supabase is retired for these worker-control paths; do not request its reactivation.
 - Squad `.squad` state is a working cache and repository audit trail only.
 - S/Agency OS policy controls models, tools, costs, permissions, and external actions.
 - The shared performance model applies to every seat: instruction adherence, completion rate, quality, reliability, and efficiency.

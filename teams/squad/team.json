@@ -33,18 +33,19 @@
       "acceptance_criteria",
       "priority"
     ],
-    "routing_strategy": "domain_specialist_with_lead_and_qa_support"
+    "routing_strategy": "domain_specialist_with_lead_and_qa_support",
+    "readiness_scope": "team_and_mission_participants"
   },
   "governance": {
     "activation_requires_passport": true,
     "owner": "S/Agency",
     "policy_authority": "S/Agency OS",
     "canonical_identity_source": "S/Agent Passport",
-    "canonical_memory_source": "Supabase",
+    "canonical_memory_source": "Manus MariaDB",
     "upstream_state_is_cache_only": true
   },
   "tracking": {
-    "canonical_store": "supabase",
+    "canonical_store": "mariadb",
     "control_room_projection": "S/Agency OS / Teams / S/Squad",
     "statuses": [
       "queued",
@@ -85,4 +86,3 @@
     "scribe-progress"
   ]
 }
-
