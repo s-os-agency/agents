@@ -30,3 +30,6 @@
 Report the completed work with direct proof. Distinguish implementation from launch, customer acceptance from inquiries and settled payments from checkout creation. Record the actual executor and any independent review that occurred. Continue authorized work without waiting for a spreadsheet update or proposed reviewer; do not claim unfinished acceptance criteria are complete. Report any unavoidable external authorization boundary specifically.
 
 **Agent document author:** GPT-6 (instructions only; not a launch attestation).
+
+## Issue delivery kit references
+- MON-20261114-02 long-document typing and conversion kit: `docs/delivery-kits/mon-20261114-02/README.md`

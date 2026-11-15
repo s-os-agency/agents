@@ -1,0 +1,15 @@
+SYNTHETIC SOURCE ONLY - DEMONSTRATION
+This file is not client work.
+
+Page 1
+Operations Manual Excerpt
+1. Safety Intake
+All visitors must complete the intake form before entry.
+2. Site Access
+Authorized personnel only.
+
+Page 2
+Monthly Counts Table
+Category | Jan | Feb | Mar
+Visitors | 120 | 118 | 131
+Incidents | 2 | 1 | ? (blurred)
